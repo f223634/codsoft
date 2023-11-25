@@ -1,0 +1,62 @@
+#include<iostream>
+using namespace std;
+void sum(int x, int y)
+{
+	int sum = 0; 
+	sum = x + y;
+	cout<<" Sum = "<<sum<<endl;
+}
+void sub(int x, int y)
+{
+	int sub = 0; 
+	sub = x - y;
+	cout<<" Subtraction = "<<sub<<endl;
+}
+void mul(int x, int y)
+{
+	int mul = 0; 
+	mul = x * y;
+	cout<<" Multiply = "<<mul<<endl;
+}
+void div(int x, int y)
+{
+	int div= 0; 
+	div = x / y;
+	cout<<" Division = "<<div<<endl;
+}
+
+int main()
+{
+	int a,b;
+	char op, choice;
+
+  	cout<<" Please Enter 1st Number : ";
+	cin>>a;
+	cout<<" Please Enter 2nd Number : ";
+	cin>>b;
+	do{
+		cout<<" Please Enter operater : ";
+	cin>>op;
+	switch(op)
+	{
+		case ('+'):
+			sum(a, b);
+			break;
+		case ('-'):
+			sub(a, b);
+			break;
+		case ('*'):
+			mul(a,b);
+			break;
+		case ('/'):
+			div(a,b);
+			break;
+		default:
+			cout<<" Wrong Input ! "<<endl;
+		
+	}
+	cout<<" Do you want to perform more opertaions ( 'y' for yes && 'n' for no ) :";
+	cin>>choice;
+	}while (choice == 'y');
+	
+}
